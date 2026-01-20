@@ -49,6 +49,13 @@ a {
 .hero {
     background: #2e2f42;
     padding-bottom: 188px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+     rgba(46, 47, 66, 0.7)),
+      url("../images/people.office.jpg");
+
 }
 
 h1, h2 {
@@ -67,6 +74,7 @@ h1 {
     padding: 0;
     margin: 0 auto 48px;
 }
+
 
 h2 {
     font-size: 36px;
@@ -96,6 +104,7 @@ h3 {
 .info:hover,
 .info:focus {
     color: #404bbf;
+
 }
 
 header {
@@ -142,6 +151,7 @@ header {
     padding: 24px 0;
     font-style: normal;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 header .container {
@@ -183,11 +193,12 @@ header address {
     letter-spacing: 0.04em;
     color: white;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: #4D5AE5;
+    background-color: #4D5AE5;
     cursor: pointer;
     padding: 16px 32px;
     border-radius: 4px;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero button {
@@ -198,7 +209,7 @@ header address {
 
 .button:hover,
 .button:focus {
-    background: #404bbf;
+    background-color: #404bbf;
 }
 
 .hero {
@@ -232,7 +243,9 @@ header address {
 .team ul {
     display: flex;
     overflow: hidden;
+    justify-content: center;
     gap: 24px;
+
    
 }
 
@@ -294,21 +307,18 @@ header address {
     padding-top: 120px;
     padding-bottom: 120px;
 }
-
-.team ul {
-    justify-content: center;
-    gap: 24px;
-    
-}
-
 .team li {
     background-color: #FFFFFF;
    width: calc((100% - 72px) / 4);
-   
+   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    
 }
 .team-card {
    padding: 32px 16px;
     width: 264px;
+    
 }
 
 .team {
@@ -324,7 +334,24 @@ header address {
     letter-spacing: 0.02em;
     color: #434455;
 }
+.portfolio-item-text
+{
+    font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+background: #4D5AE5;
+color: #F4F4FD;
+position: absolute;
+top: 0;
+padding: 40px 32px 164px 32px;
+transform: translateY(300%);
+transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
+}
+.item-text:hover .portfolio-item-text
+{
+    transform: translateY(0);
+}
 .portfolio ul {
     gap: 48px 24px;
     justify-content: center;
@@ -334,6 +361,17 @@ header address {
 }
 .portfolio li{
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio li:hover
+{
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+     0 1px 1px 0 rgba(46, 47, 66, 0.16),
+     0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.hover-text {
+    position: relative;
+    overflow: hidden;
 }
 .card-title {
     margin-bottom: 8px;
@@ -382,10 +420,58 @@ h1 {
     border-bottom: 1px solid #E7E9FC;
     border-left: 1px solid #E7E9FC;
     border-right: 1px solid #E7E9FC;
-   padding: 32px 16px;
-    width: 360px;
-    height: 120px;
+    padding: 32px 16px;
 }
 .portfolio-title {
     margin-bottom: 72px;
+}
+
+.features-icon
+{
+    border: 1px solid #8E8F99;
+border-radius: 4px;
+width: 264px;
+height: 112px;
+}
+.icons a
+{
+    width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+   fill: #f4f4fd;
+  border-radius: 50%;
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.icons-footer a {
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+   fill: #f4f4fd;
+  border-radius: 50%;
+display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+margin-top: 16px;
+}
+footer .container
+{
+    display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: row;
+gap: 16px;
 }
